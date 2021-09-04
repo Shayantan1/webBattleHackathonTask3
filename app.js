@@ -8,7 +8,7 @@ const bcrypt=require("bcrypt");
 const date = require(__dirname + "/date.js");
 const saltRounds=10;
 
-mongoose.connect("mongodb://localhost:27017/Blog", {
+mongoose.connect("mongodb+srv://admin-Shayantan:Test123@cluster0.fb0pm.mongodb.net/Blog", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -169,8 +169,12 @@ app.post("/personal",function(req,res){
 });
 
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+app.listen(port, function() {
+  console.log("Server has started successfully.");
 });
