@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog it Out</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+<style>
+    @media(max-width: 998px) {
+        html {
+            font-size: 65%;
+        }
+    }
+    @media(max-width: 768px)
+    {
+    html{
+        font-size: 45%;
+    }
+}
+    @media(max-width: 450px)
+    {
+    html{
+        font-size: 25%;
+    }
+}
+    .top {
+        background-color: rgb(255, 255, 206);
+    }
+
+    footer {
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 40px;
+        text-align: center;
+        border-bottom: 0.4em solid black;
+        background-color: rgba(15, 194, 15, 0.733);
+    }
+
+    img {
+        height: 10rem;
+        width: 10rem;
+        margin: 2rem;
+        padding: 1rem;
+    }
+
+    .mid {
+        text-align: center;
+        padding: 4rem;
+    }
+
+    .left {
+        position: absolute;
+    }
+
+    #insidetop {
+        color: red;
+        text-align: center;
+        margin: auto;
+    }
+
+    button {
+        display: block;
+        width: 30rem;
+        border-radius: 4rem;
+        margin: 1rem auto;
+        background-color: black;
+        color: white;
+        font-size: 3rem;
+    }
+    button:hover {
+        background-color: rgb(13, 66, 240);
+        color: black;
+        cursor: pointer;
+    }
+    h1 span{
+        color: blue;
+    }
+    h1{
+        display: inline;
+        font-size: 5rem;
+        background-color: #fff;
+        margin: 0.8rem;
+        padding: 1rem;
+        font-weight: bold;
+        width: 60rem;
+        align-items: center;
+    }
+    .top p{
+        text-align: center;
+        width: 50rem;
+        margin: auto;
+        padding: 0.8rem;
+        width: 50rem;
+    }
+
+</style>
+
+<body>
+    <div class="top">
+        <header>
+            <div class="left"><img src="/images/logo.jpeg" alt=""></div>
+            <div class="mid">
+                <h1>Welcome to <span>Blog it Out. </span></h1>
+                <h2>Create your blog here. </h2>
+                <p>Welcome! everybody to the blogging website Blog it Out. In this platform you can create blogs, post them and show
+                  your blog to the world. So start blogging on any topic you are interested in. </p>
+            </div>
+        </header>
+        <div class="btn">
+          <form action="/login" method="get">
+                <button type="submit" name="button">Log-in</button>
+            </form>
+            <form action="/register" method="get">
+                <button type="submit" name="button">Register</button>
+            </form>
+
+        </div>
+        <p id="insidetop">*Already registered users can Login directly.</p>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <h4>Developed by Shourya, Shyantan and Harsh</h4>
+            <p>
+                <a href="https://www.instagram.com/" target="_blank" style="color:#e6004c; text-decoration: none;"><i
+                        class="fab fa-instagram"></i> Instagram&nbsp;&nbsp;</a>
+                <a href="https://www.facebook.com/" target="_blank" style="color:#4d4dff; text-decoration: none;"><i
+                        class="fab fa-facebook"></i> facebook</a>
+                <br>
+                Copyright © Blog It Out 2021
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

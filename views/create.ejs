@@ -1,0 +1,26 @@
+<%- include('partials/header'); -%>
+<h1>Create Your Posts here!</h1>
+<h1><%= day %></h1>
+
+<form action="/home" method="post">
+ <textarea class="textbox" style="margin-bottom:0px;" name="headPublic" rows="1" placeholder="Write your blog heading here"></textarea>
+  <div>
+    <textarea class="textbox" style="margin-bottom:0px;" name="publicPost" rows="10" placeholder="Write your blog here"></textarea>
+  </div>
+<input style="margin-left:120px;margin-bottom:80px;margin-right:20px;padding:10px;" type="text" name="username" placeholder="Write your username" >
+  <button type="submit" name="button">Add to public posts</button>
+
+</form>
+
+<form action="/personal" method="post">
+<textarea class="textbox" style="margin-bottom:0px;" name="headPrivate" rows="1" placeholder="Write your blog heading here"></textarea>
+  <div>
+    <textarea class="textbox"  style="margin-bottom:0px;" name="privatePost" rows="10" placeholder="Write your blog here"></textarea>
+  </div>
+
+<input style="margin-left:120px;margin-right:20px;padding:10px;" type="text" name="username" placeholder="Write your username">
+
+    <button type="submit" name="button">Add to private posts</button>
+</form>
+
+<%- include('partials/footer'); -%>

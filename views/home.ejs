@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Posts</title>
+</head>
+<style>
+    @media(max-width: 998px) {
+        html {
+            font-size: 65%;
+        }
+    }
+
+    @media(max-width: 768px) {
+        html {
+            font-size: 45%;
+        }
+    }
+
+    @media(max-width: 450px) {
+        html {
+            font-size: 25%;
+        }
+    }
+
+    .footer-padding {
+      padding-bottom: 60px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      height: 60px;
+      background-color: #C2F784;
+    }
+
+    .footer p {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #fff;
+    }
+
+    .top {
+        background-color: rgb(255, 255, 206);
+    }
+
+
+    img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .left {
+        float: left;
+        display: block;
+        width: 12%;
+        margin-top: 0.5rem;
+
+    }
+
+
+    body {
+        background-color: rgb(255, 255, 206);
+    }
+
+    .navbar {
+        display: block;
+        float: right;
+    }
+
+    .right {
+        display: block;
+        width: 38%;
+        float: right;
+        margin-top: 0.5rem;
+
+    }
+
+    .navbar li a {
+        color: #e02727;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    .navbar li {
+        list-style: none;
+        float: left;
+        margin: auto 0.2rem;
+        border: 0.2rem solid black;
+        border-radius: 2rem;
+        padding: 0.4rem;
+
+    }
+
+    .navbar li:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .navbar a.active {
+        background-color: #839790;
+        color: white;
+    }
+
+    .navbar ul {
+        overflow: auto;
+    }
+
+    .navbar .icon {
+        display: none;
+    }
+
+    .random {
+        display: inline-block;
+
+        text-align: center;
+        font-size: 4rem;
+        width: 48%;
+        padding: 0.2rem;
+    }
+
+    .do{
+      font-style: italic;
+      font-weight: bold;
+    }
+
+</style>
+
+<body>
+
+    <header>
+        <div class="left"><img src="/images/logo.jpeg" alt=""></div>
+        <div class="right">
+            <nav class="navbar">
+                <ul>
+                  <li><a href="/logout">
+                          Logout</a>
+                  </li>
+
+                    <li><a href="/home">
+                            PUBLIC POSTS</a>
+                    </li>
+                    <li><a href="/create">
+                            CREATE YOUR BLOG</a>
+                    </li>
+                    <li><a href="/personal">
+                            PRIVATE</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+    </header>
+    </div>
+    <h1 class="random">Blog it Out</h1>
+    <div class="container">
+
+    <% publics.reverse().forEach(function(publ){ %>
+      <h1> <%= publ.date %> </h1>
+      <h2><%= publ.username %></h2>
+      <p class="do">
+        <%= publ.title %>
+      </p>
+      <p>
+      <%= publ.content %>
+      </p>
+
+      <% }); %>
+
+    </div>
+    <div class="footer-padding"></div>
+      <div class="footer">
+
+        <p>
+          <a href="https://www.instagram.com/" target="_blank" style="color:#e6004c; text-decoration: none;"><i class="fab fa-instagram"></i> Instagram&nbsp;&nbsp;</a>
+          <a href="https://www.facebook.com/" target="_blank" style="color:#4d4dff; text-decoration: none;"><i class="fab fa-facebook"></i> facebook</a>
+          <br>
+          Copyright © Blog it out
+        </p>
+      </div>
+    </div>
+</body>
+
+</html>
